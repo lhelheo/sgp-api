@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { getProjects } from "../controllers/project";
 
 const timeRouter = Router();
 

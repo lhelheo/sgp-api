@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import timeRouter from "../api/routes/project";
+import { getProjects } from "../api/controllers/project";
 
 const app = express();
 app.use(helmet());
@@ -13,5 +14,6 @@ app.get("/ping", (req, res) => {
 });
 
 app.use("/time", timeRouter);
+app.use("/projects", getProjects); // TODO: Corrigir depois
 
 export default app;

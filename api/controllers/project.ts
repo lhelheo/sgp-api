@@ -9,6 +9,7 @@ import {
 } from "../interfaces/project";
 
 const projects: IProject[] = [];
+
 export function createProject(
   req: Request,
   res: Response
@@ -42,5 +43,3 @@ export function getProjects(
     projects,
   });
 }
-
-// test commit
