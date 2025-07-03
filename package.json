@@ -1,29 +1,38 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "helmet": "^8.1.0",
-    "nodemon": "^3.1.10"
-  },
   "name": "sgp-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  },
   "scripts": {
-    "dev": "npx nodemon src/server.ts --watch 'src/' -e ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/server.js",
-    "build": "tsc --project tsconfig.json",
-    "vercel-build": "npm run build && cp -r ./src/api ./dist/api && cp -r ./src/config ./dist/config && cp -r ./src/utils ./dist/utils && cp -r ./src/middlewares ./dist/middlewares && cp -r ./src/models ./dist/models && cp -r ./src/services ./dist/services"
+    "dev": "ts-node-dev --respawn --pretty src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhelheo/sgp-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lhelheo/sgp-api/issues"
+  },
+  "homepage": "https://github.com/lhelheo/sgp-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^24.0.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
 }
