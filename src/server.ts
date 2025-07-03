@@ -6,3 +6,8 @@ app.listen(port, () => {
     `Server is running on port ${port}`
   );
 });
+
+// export const mainRouter = Router();
+// mainRouter.get("/ping", (req, res) => {
+//   res.json({ message: "pong" });
+// });
